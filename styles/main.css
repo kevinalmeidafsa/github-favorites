@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+  --ff-primary: "Kanit", sans-serif;
+  --text-color: hsl(13, 20%, 98%);
+  --primary-color: hsl(13, 95%, 50%);
+  --primary-hover-color: hsl(13, 95%, 60%);
+  --background-color: hsl(13, 20%, 15%);
+  --border-color: hsl(13, 20%, 98%, 0.2);
+}
+
+body {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+body * {
+  font-family: var(--ff-primary);
+}
+
+#app {
+  max-width: 72rem;
+  padding: 1.6rem;
+  min-height: 100svh;
+  margin: 0 auto;
+}
+
+button {
+  background-color: var(--primary-color);
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 0%;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+button:hover {
+  background-color: var(--primary-hover-color);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.input-search {
+  display: flex;
+  align-items: center;
+}
+.input-search input {
+  font-size: 1.4rem;
+  padding: 0 1.6rem;
+  border: 1px solid var(--border-color);
+  border-right: none;
+  border-radius: 0.6rem 0 0 0.6rem;
+
+  min-height: 4rem;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+.input-search button {
+  height: 4rem;
+  border-radius: 0 0.6rem 0.6rem 0;
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 1.2rem;
+  overflow: auto;
+  max-height: 32rem;
+  box-shadow: 0 0 2rem -1rem rgba(0, 0, 0, 0.8);
+}
+table * {
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+table th {
+  background-color: var(--primary-color);
+  text-align: left;
+  font-weight: 500;
+  font-size: 1.6rem;
+  padding: 1.6rem;
+}
+
+table th:first-child {
+  width: 40%;
+  border-top-left-radius: 0.8rem;
+}
+table th:last-child {
+  border-top-right-radius: 0.8rem;
+}
+table tr:nth-child(odd) {
+  background-color: hsl(13, 20%, 5%);
+}
+table tr:nth-child(even) {
+  background-color: hsl(13, 20%, 10%);
+}
+
+table td {
+  padding: 1.6rem;
+  text-align: left;
+}
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+td.user img {
+  width: 5.2rem;
+  height: 5.2rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+td.user a {
+  text-decoration: none;
+}
+td.user a p {
+  font-weight: 700;
+}
+td .remove {
+  background: none;
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+td .remove:hover {
+  background: none;
+  color: var(--primary-hover-color);
+}
+
+table td.empty-wrapper {
+  padding: 3.2rem;
+  text-align: center;
+  height: 32rem;
+}
+table td div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+}
+
+table td img.image-empty {
+  height: 6.4rem;
+}
+
+table td span.text-empty {
+  font-size: 2rem;
+}
+
+
+/* UTILS */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
